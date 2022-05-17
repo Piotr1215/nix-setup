@@ -9,12 +9,55 @@
     };
 
     shellAliases = {
-      rmd = "rm -rf";
-      psa = "ps aux";
-      l = "exa -F";
-      t = "tmux attach-session";
-      view = "nvim -R"; # programs.neovim can't symlink this.
-      k = "kubectl";
+     grep=rg;
+     yx='y -t ';
+     gs='git show';
+     y=z;
+     op='xdg-open ';
+     ddgit='web_search github';
+     lg='lazygit';
+     lvim='nvim -c "normal '\''0"';
+     redirect="2>&1 | tee output.txt";
+     go16="go1.16.15";
+     yml="cat <<EOF | kubectl create -f -";
+     mux=tmuxinator;
+     ra=ranger;
+     alaw='nohup alacritty --working-directory $PWD >&/dev/null';
+     ghs='gh s';
+     ls='exa --long --all --header --icons';
+     la='exa --long --grid --all --sort=accessed --reverse --header --icons';
+     cat=batcat;
+     lzd='docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -v /config/lazydocker:/.config/jesseduffield/lazydocker lazyteam/lazydocker';
+     rest='shutdown now';
+     vedit='vim ~/.config/nvim/init.vim';
+     zedit='vim ~/.zshrc';
+     vim='nvim';
+     gcc='git diff --stat --cached origin/master' # Git Check Commit before pushing;
+     docs='docsify serve docs';
+     glog='git log --graph --oneline --decorate';
+     music='browse https://www.youtube.com/playlist?list=PL3-_0fT8ay_I9cEIoPNKRN7PcGjnAZ1Re';
+     getupd='source ${HOME}/scripts/getupdates.sh';
+     k=kubectl;
+     dev='cd ~/dev';
+     kdump='kubectl get all --all-namespaces';
+     addkey='eval $(ssh-agent) && ssh-add';
+     ll='ls -lah';
+     l='lsd -al';
+     lol=lolcat;
+     lal='lsd -al | lolcat -a -d 5';
+     km=kustomize;
+     vz='vim ~/.zshrc';
+     diskusage='du -sh * | sort -h --reverse';
+     cls=clear;
+     dls="docker container ls -a";
+     serve="browser-sync start -s -f . --no-notify --host localhost --port 5000";
+     dca='code /home/decoder/dev/dca-prep-kit';
+     lst='dpkg -l' #List installed packages with their description;
+     dpsa="docker ps -a --format 'table {{.ID}}\t{{.Names}}\t{{.Image}}'" #docker ps -a with only id name and image;;
+     gmail='web_search duckduckgo \!gmail';
+     disk='gdu';
+     mkdd='mkdir $(date +"%Y-%m-%d")' admin='sudo bash -c "apt-get update && apt-get -y upgrade && apt-get -y autoremove && apt-get -y clean"';
+     sr='source ~/.zshrc';
     };
 
     packages = [

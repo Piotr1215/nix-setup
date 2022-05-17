@@ -1,5 +1,5 @@
 {
-  description = "A NixOS configuration for https://github.com/negz's M1 Mac";
+  description = "A NixOS configuration for M1 Mac";
 
   inputs = {
     darwin = {
@@ -29,7 +29,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.negz = import ./users/negz/configuration.nix;
+            home-manager.users.piotr = import ./users/piotr/configuration.nix;
           }
         ];
       };
@@ -43,7 +43,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.negz = import ./users/negz/configuration.nix;
+            home-manager.users.piotr = import ./users/piotr/configuration.nix;
           }
         ];
       };
